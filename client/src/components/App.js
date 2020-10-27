@@ -1,11 +1,14 @@
-import React from 'react';
-import { Button } from 'antd';
+import React, { useState } from 'react';
 import './App.css';
+import Login from './Login/Login';
 
-function App() {
+const App = () => {
+  const [userName, setUserName] = useState()
+
   return (
     <div>
-      <Button type="primary">Button</Button>
+      {userName}
+      <Login setUserName={setUserName} />
     </div>
   );
 }
